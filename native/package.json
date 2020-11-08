@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "main": "./dist/index.native.cjs.js",
+  "module": "./dist/index.native.esm.js",
+  "types": "./dist/index.d.ts"
+}

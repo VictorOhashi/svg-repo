@@ -1,0 +1,36 @@
+{
+  "name": "svg-repo",
+  "version": "1.0.0",
+  "repository": "https://github.com/VictorOhashi/svg-repo.git",
+  "author": "Victor Ohashi <victor.ohashi@softplan.com.br>",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build:web": "svgr -d src/web src --memo --typescript --title-prop",
+    "build:native": "svgr -d src/native src --native --memo --typescript --title-prop",
+    "build:components": "yarn build:web && yarn build:native",
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@svgr/cli": "^5.4.0",
+    "@types/react": "^16.9.55",
+    "@types/react-native": "^0.63.30",
+    "react": "^17.0.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.2.tar.gz",
+    "react-native-svg": "^12.1.0",
+    "rollup": "^2.32.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "typescript": "^4.0.5"
+  }
+}
