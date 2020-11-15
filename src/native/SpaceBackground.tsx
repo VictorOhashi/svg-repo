@@ -1,5 +1,12 @@
 import * as React from "react";
-import Svg, { G, Path, Defs, LinearGradient, Stop } from "react-native-svg";
+import Svg, {
+  SvgProps,
+  G,
+  Path,
+  Defs,
+  LinearGradient,
+  Stop,
+} from "react-native-svg";
 /* SVGR has dropped some elements not supported by react-native-svg: animate, filter */
 
 interface SVGRProps {
@@ -11,13 +18,14 @@ function SvgSpaceBackground({
   title,
   titleId,
   ...props
-}: React.SVGProps<SVGSVGElement> & SVGRProps) {
+}: SvgProps & SVGRProps) {
   return (
     <Svg
       width={1453}
       height={848}
       viewBox="0 0 1453 848"
       fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       aria-labelledby={titleId}
       {...props}
     >

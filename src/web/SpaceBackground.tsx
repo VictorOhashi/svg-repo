@@ -15,6 +15,7 @@ function SvgSpaceBackground({
       height={848}
       viewBox="0 0 1453 848"
       fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       aria-labelledby={titleId}
       {...props}
     >

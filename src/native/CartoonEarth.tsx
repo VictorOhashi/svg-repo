@@ -1,5 +1,5 @@
 import * as React from "react";
-import Svg, { Path, Mask, G } from "react-native-svg";
+import Svg, { SvgProps, Path, Mask, G } from "react-native-svg";
 /* SVGR has dropped some elements not supported by react-native-svg: animateTransform */
 
 interface SVGRProps {
@@ -7,11 +7,7 @@ interface SVGRProps {
   titleId?: string;
 }
 
-function SvgCartoonEarth({
-  title,
-  titleId,
-  ...props
-}: React.SVGProps<SVGSVGElement> & SVGRProps) {
+function SvgCartoonEarth({ title, titleId, ...props }: SvgProps & SVGRProps) {
   return (
     <Svg
       width={600}
@@ -22,6 +18,7 @@ function SvgCartoonEarth({
         margin: "auto",
         height: "100%",
       }}
+      xmlns="http://www.w3.org/2000/svg"
       aria-labelledby={titleId}
       {...props}
     >
